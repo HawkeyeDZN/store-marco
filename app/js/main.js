@@ -17,7 +17,7 @@ $(function(){
       "endColor": "#ffc35b" 
     },
     halfStar: true,
-    readOnly: true
+    readOnly: true,
 
   });
 });

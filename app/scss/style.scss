@@ -452,12 +452,17 @@ footer{
       display: flex;
       justify-content: center;
       @extend %roboto-400;
-      font-size: 17px;
+      font-size: 18px;
 
     }
     &__new-price{
       padding: 0 12px;
       color: $title;
+      transition: all .4s;
+      cursor: pointer;
+      &:hover{
+        color: $accent;
+      }
     }
     &__old-price{
       padding: 0 12px;
