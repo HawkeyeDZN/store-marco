@@ -96,6 +96,10 @@ footer{
     // line-height: 36px;
     margin-bottom: 14px;
     display: block;
+    transition: all .3s;
+    &:hover{
+      color: $accent;
+    }
   }
 
   &__social-list{
@@ -170,6 +174,8 @@ footer{
   }
 }
 
+
+
 .top-slider{
   // background-image: url('../images/decor/top-slider-bg.png');
   // background-repeat: no-repeat;
@@ -177,16 +183,18 @@ footer{
   // background-color: $bg;
   background-color: rgb(86, 145, 255);
   padding-top: 65px;
-  
   &__img{
     padding-bottom: 44px;
   }
+ 
   &__container{
     max-width: 1560px;
   }
   &__content{
+    // padding-left: 175px;
+    // padding-top: 130px;
     padding-left: 175px;
-    padding-top: 130px;
+    padding-top: 144px;
   }
   &__item{
     display: flex !important;

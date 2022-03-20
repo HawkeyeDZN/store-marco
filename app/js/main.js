@@ -5,7 +5,8 @@ $(function(){
     arrows: false,
     fade: true,
     autoplay: true,
-    autoplaySpeed: 3000
+    autoplaySpeed: 3000,
+    touchMove:false
   });
 
   $(".star").rateYo({
@@ -20,6 +21,10 @@ $(function(){
     readOnly: true,
 
   });
+  document.getElementsByClassName('top-slider__inner')[0].addEventListener('click', console.log('click'));
+
+
+
   function getTimeRemaining(endtime) {
     const total = Date.parse(endtime) - Date.parse(new Date());
     const seconds = Math.floor((total / 1000) % 60);
