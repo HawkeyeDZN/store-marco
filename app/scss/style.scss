@@ -165,6 +165,8 @@ footer{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top center;
+    padding: 139px 0 139px;
+    text-align: center;
   }
 }
 
@@ -695,23 +697,56 @@ footer{
   }
 }
 
+.modal{
+  padding: 100px 0;
+  max-width: 570px;
+  margin: 0 auto;
+  &__links{
+    text-align: center;
+    margin-bottom: 40px;
 
-
-.BG {
-  background-color: rgb(255, 255, 255);
-  box-shadow: 20px 0px 60px 0px rgba(202, 202, 202, 0.35);
-  position: absolute;
-  left: 375px;
-  top: 5688px;
-  width: 370px;
-  height: 478px;
-  z-index: 164;
+  }
+  &__link{
+    font-size: 22px;
+    color: #909090;
+    @extend %roboto-400;
+    margin: 0 30px;
+  }
+  &__link--active{
+    color: $accent;
+    @extend %roboto-700;
+  }
+  &__label{
+    margin-bottom: 30px;
+    display: block;
+  }
+  &__input{
+    display: block;
+    width: 100%;
+    border: none;
+    background-color: $bg;
+    border-radius: 4px;
+    margin-top: 14px;
+    height: 60px;
+    padding: 0 15px;
+  }
+  &__btn{
+    display: block;
+    background-color: $title;
+    text-transform: uppercase;
+    color: #fff;
+    @extend %roboto-400;
+    padding: 14px 0;
+    border: none;
+    width: 100%;
+    cursor: pointer;
+  }
+  &__error{
+    margin-top: 12px;
+    color: $accent;
+    display: inline-block;
+  }
 }
-
-
-
-
-
 
 
 
