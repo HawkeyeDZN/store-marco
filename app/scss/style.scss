@@ -159,6 +159,9 @@ footer{
   background-size: cover;
   background-color: $bg;
   padding-top: 65px;
+  &__img{
+    padding-bottom: 44px;
+  }
   &__container{
     max-width: 1560px;
   }
