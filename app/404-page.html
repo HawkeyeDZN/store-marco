@@ -10,7 +10,7 @@
 </head>
 
 <body>
-  <header class="header">
+  <header class="header header--400-page">
     <div class="container">
       <div class="header__inner">
         <a href="#" class="logo">
@@ -57,57 +57,23 @@
 
   <main class="main">
 
-    <section class="top">
-      <div class="top__container" style="background-image: url('images/top-bg.jpg');">
-        <div class="container">
-          <h2 class="top__title title">Регистрация</h2>
-          <div class="bredcrumbs">
-            <ul class="bredcrumbs__list">
-              <li class="bredcrumbs__item">
-                <a href="#" class="bredcrumbs__link">
-                  Главная
-                </a>
-              </li>
-              <li class="bredcrumbs__item">
-                <a href="#" class="bredcrumbs__link">
-                  Регистрация
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-
-    <section class="modal">
+    <section class="page-404">
       <div class="container">
-        <div class="modal__links">
-          <a class="modal__link modal__link--active" href="#">Регистрация</a>
-          <a class="modal__link " href="#">Вход</a>
+        <div class="page-404__inner">
+          <div class="page-404__content">
+            <h2 class="page-404__title title">
+              Упс! Произошла ошибка
+            </h2>
+            <p class="page-404__text">
+              Сожалеем, но мы не можем найти страницы, которые вы запрашиваете. Это может быть связано с тем, что вы неправильно
+              набрали веб-адрес.
+            </p>
+            <a href="#" class="page-404__link">НА ГЛАВНУЮ</a>
+          </div>
+          <img src="images/404.png" alt="404 images" class="page-404__img">
         </div>
-        <form class="modal__form" action="#">
-          <label class="modal__label">
-            Имя пользователя или адрес электронной почты*
-            <input class="modal__input" type="text" required>
-          </label>
-          <label class="modal__label">
-            Пароль*
-            <input class="modal__input" type="text" required>
-          </label>
-          <p class="modal__text">Пароль будет отправлен на ваш адрес электронной почты.</p>
-          <p class="modal__text">Ваши персональные данные будут использоваться для поддержки вашего использования на этом веб-сайте, для управления
-          доступом к вашей учетной записи и для других целей, описанных в нашей политике конфиденциальности.</p>
-          <label class="modal__label">
-            <input type="checkbox">
-            Согласен с правилами и условиями
-          </label>
-          <button class="modal__btn" type="submit">Регистрация</button>
-        </form>
       </div>
     </section>
-
-    
 
   </main>
 
