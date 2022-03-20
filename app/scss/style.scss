@@ -153,11 +153,25 @@ footer{
   }
 }
 
+.Rectangle_586 {
+  background-image: -moz-linear-gradient( 90deg, rgb(68,138,255) 0%, rgb(113,160,255) 48%, rgb(111,135,255) 100%);
+  background-image: -webkit-linear-gradient( 90deg, rgb(68,138,255) 0%, rgb(113,160,255) 48%, rgb(111,135,255) 100%);
+  background-image: -ms-linear-gradient( 90deg, rgb(68,138,255) 0%, rgb(113,160,255) 48%, rgb(111,135,255) 100%);
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 1920px;
+  height: 701px;
+  z-index: 1;
+}
+
+
 .top-slider{
-  background-image: url('../images/decor/top-slider-bg.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-color: $bg;
+  // background-image: url('../images/decor/top-slider-bg.png');
+  // background-repeat: no-repeat;
+  // background-size: cover;
+  // background-color: $bg;
+  background-color: rgb(86, 145, 255);
   padding-top: 65px;
   &__img{
     padding-bottom: 44px;
@@ -167,7 +181,7 @@ footer{
   }
   &__content{
     padding-left: 175px;
-    padding-top: 125px;
+    padding-top: 130px;
   }
   &__item{
     display: flex !important;
@@ -176,7 +190,8 @@ footer{
   }
   &__title{
     min-width: 670px;
-    color: $title;
+    // color: $title;
+    color: #fff;
     font-size: 58px;
     line-height: 68px;
     @extend %roboto-700;
@@ -186,15 +201,18 @@ footer{
     margin-bottom: 55px;
     max-width: 400px;
     font-size: 20px;
+    color: #fff;
+    line-height: 34px;
   }
   &__link{
     @extend %btn;
-    padding: 14px 36px;
+    padding: 14px 56px;
   }
   .slick-dots{
     display: flex;
     justify-content: center;
-    margin-top: -70px;
+    margin-top: -90px;
+    padding-bottom: 20px;
     li{
       padding: 0 5px;
       line-height: 0;
@@ -205,7 +223,7 @@ footer{
         width: 26px;
         height: 26px;
         border-radius: 50%;
-        border: 1px solid transparent;
+        border: 2px solid transparent;
         position: relative;
         &::before{
           content: '';
@@ -213,7 +231,7 @@ footer{
           width: 6px;
           height: 6px;
           border-radius: 50%;
-          background-color: $default;
+          background-color: $dotscolor;
           top: 50%;
           left: 50%;
           transform: translate(-50%, -50%);
@@ -221,9 +239,9 @@ footer{
       }
       &.slick-active{
         button{
-          border-color: $accent;
+          border-color: $dotsactive;
           &::before{
-            background-color: $accent;
+            background-color: $dotsactive;
           }
         }
       }
@@ -238,6 +256,9 @@ footer{
   background-size: contain;
   background-position: center;
 }
+
+
+
 
 .info{
   display: flex;
@@ -495,7 +516,7 @@ footer{
     text-transform: uppercase;
     color: $title;
     display: inline-block;
-    border: 1px solid $accent;
+    border: 2px solid $accent;
     padding: 14px 28px;
     margin-top: 55px;
   }
@@ -503,6 +524,55 @@ footer{
 
 .star{
   margin: 0 auto;
+}
+
+.promo{
+  background-image: url('../images/promo-bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+  padding: 150px 0 160px;
+  text-align: center;
+  &__inner{
+    max-width: 570px;
+    width: 100%;
+    margin-left: auto;
+  }
+  &__subtitle{
+    color: $accent;
+    text-transform: uppercase;
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+  &__clock{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 55px;
+  }
+  &__clock-item{
+    background-color: #fff;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    span{
+      font-size: 48px;
+      @extend %roboto-700;
+      color: $accent;
+      margin-bottom: 14px;
+      margin-top: 14px;;
+    }
+  }
+  &__link{
+    text-transform: uppercase;
+    color: $title;
+    display: inline-block;
+    border: 2px solid $accent;
+    padding: 14px 28px;
+    margin-top: 55px;
+  }
 }
 
 
