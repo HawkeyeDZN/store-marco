@@ -181,12 +181,23 @@ footer{
   // background-repeat: no-repeat;
   // background-size: cover;
   // background-color: $bg;
-  background-color: rgb(86, 145, 255);
+  $color:rgb(86, 145, 255);
+  // background-color: rgb(86, 145, 255);
+  @if top-slider__item-1{
+    background-color: $color;
+  }
+  @else if top-slider__item-2{
+    background-color: rgb(255, 82, 82);
+  }
+
+
+
+
   padding-top: 65px;
   &__img{
     padding-bottom: 44px;
   }
- 
+  
   &__container{
     max-width: 1560px;
   }
