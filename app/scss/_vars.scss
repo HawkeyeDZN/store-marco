@@ -1,5 +1,7 @@
 $accent: #fe3e57;
 $default: #868a9c;
+$dotscolor: #fff;
+$dotsactive: rgb(255, 240, 107);
 $title: #23212d;
 $bg: #f6f6f6;
 
@@ -21,4 +23,21 @@ $bg: #f6f6f6;
 %roboto-700{
   font-family: 'Roboto-Bold', sans-serif;
   font-weight: 700;
+}
+%btn{
+    background-color: $accent;
+    text-transform: uppercase;
+    color: #fff;
+    line-height: 26px;
+    padding: 12px 26px;
+    @extend %roboto-400;
+    box-shadow: 0px 11px 30px 0px rgba(255, 17, 57, 0.3);
+    border-radius: 3px;
+}
+%checkbox-hidden{
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect( 0 0 0 0);
+    position: absolute;
 }

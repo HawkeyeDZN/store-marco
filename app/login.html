@@ -7,6 +7,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Store</title>
   <link rel="stylesheet" href="css/style.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <script src="js\wow.min.js"></script>
+  <script>
+    new WOW().init();
+  </script>
 </head>
 
 <body>
@@ -19,7 +24,7 @@
         <nav class="menu">
           <ul class="menu__list">
             <li class="menu__list-item">
-              <a  class="menu__list-link menu__list-link--active" href="#">Главная</a>
+              <a  class="menu__list-link menu__list-link--active" href="index.html">Главная</a>
             </li>
             <li class="menu__list-item">
               <a  class="menu__list-link" href="#">Магазин</a>
@@ -57,19 +62,19 @@
 
   <main class="main">
 
-    <section class="top">
+    <section class="top wow animate__animated animate__slideInRight">
       <div class="top__container" style="background-image: url('images/top-bg.jpg');">
         <div class="container">
           <h2 class="top__title title">Вход</h2>
           <div class="bredcrumbs">
             <ul class="bredcrumbs__list">
               <li class="bredcrumbs__item">
-                <a href="#" class="bredcrumbs__link">
+                <a href="index.html" class="bredcrumbs__link">
                   Главная
                 </a>
               </li>
               <li class="bredcrumbs__item">
-                <a href="#" class="bredcrumbs__link">
+                <a href="login.html" class="bredcrumbs__link">
                   Вход
                 </a>
               </li>
@@ -79,6 +84,31 @@
       </div>
     </section>
 
+
+    <section class="modal wow animate__animated animate__slideInRight">
+      <div class="container">
+        <div class="modal__links">
+          <a class="modal__link" href="#">Регистрация</a>
+          <a class="modal__link modal__link--active" href="#">Вход</a>
+        </div>
+        <form class="modal__form" action="#">
+          <label class="modal__label">
+            Имя пользователя или адрес электронной почты*
+            <input class="modal__input" type="text" required>
+          </label>
+          <label class="modal__label">
+            Пароль*
+            <input class="modal__input" type="text" required>
+          </label>
+          <label class="modal__label">
+            <input type="checkbox">
+            Запомнить меня
+          </label>
+          <button class="modal__btn" type="submit">ВХОД</button>
+          <a href="#" class="modal__error">Забыли свой пароль?</a>
+        </form>
+      </div>
+    </section>
 
   </main>
 

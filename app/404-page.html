@@ -7,10 +7,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Store</title>
   <link rel="stylesheet" href="css/style.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <script src="js\wow.min.js"></script>
+  <script>
+    new WOW().init();
+  </script>
 </head>
 
 <body>
-  <header class="header">
+  <header class="header header--400-page">
     <div class="container">
       <div class="header__inner">
         <a href="#" class="logo">
@@ -19,10 +24,10 @@
         <nav class="menu">
           <ul class="menu__list">
             <li class="menu__list-item">
-              <a  class="menu__list-link menu__list-link--active" href="#">Главная</a>
+              <a  class="menu__list-link menu__list-link--active" href="index.html">Главная</a>
             </li>
             <li class="menu__list-item">
-              <a  class="menu__list-link" href="#">Магазин</a>
+              <a  class="menu__list-link" href="shop.html">Магазин</a>
             </li>
             <li class="menu__list-item">
               <a  class="menu__list-link" href="#">Страницы</a>
@@ -57,28 +62,23 @@
 
   <main class="main">
 
-    <section class="top">
-      <div class="top__container" style="background-image: url('images/top-bg.jpg');">
-        <div class="container">
-          <h2 class="top__title title">Вход</h2>
-          <div class="bredcrumbs">
-            <ul class="bredcrumbs__list">
-              <li class="bredcrumbs__item">
-                <a href="#" class="bredcrumbs__link">
-                  Главная
-                </a>
-              </li>
-              <li class="bredcrumbs__item">
-                <a href="#" class="bredcrumbs__link">
-                  Вход
-                </a>
-              </li>
-            </ul>
+    <section class="page-404 wow animate__animated animate__slideInRight">
+      <div class="container">
+        <div class="page-404__inner">
+          <div class="page-404__content">
+            <h2 class="page-404__title title">
+              Упс! Произошла ошибка
+            </h2>
+            <p class="page-404__text">
+              Сожалеем, но мы не можем найти страницы, которые вы запрашиваете. Это может быть связано с тем, что вы неправильно
+              набрали веб-адрес.
+            </p>
+            <a href="#" class="page-404__link">НА ГЛАВНУЮ</a>
           </div>
+          <img src="images/404.png" alt="404 images" class="page-404__img">
         </div>
       </div>
     </section>
-
 
   </main>
 
