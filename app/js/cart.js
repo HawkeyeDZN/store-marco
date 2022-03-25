@@ -50,11 +50,11 @@ const generateCartProduct = (img, title, price, id) => {
 		</li>
 	`;
 
-}
+};
 
 const deleteProducts = (productParent) => {
   let id = productParent.querySelector('.cart-product').dataset.id;
-  document.querySelector(`.product[data-id="${id}"]`).querySelector('.product-item__btn').disabled = false;
+  document.querySelector(`.product-item[data-id="${id}"]`).querySelector('.product-item__btn').disabled = false;
 
   let currentPrice = parseInt(priceWithoutSpaces(productParent.querySelector('.cart-product__price').textContent));
   minusFullPrice(currentPrice);
@@ -77,7 +77,6 @@ productsBtn.forEach(el => {
     let priceNumber = parseInt(priceWithoutSpaces(parent.querySelector('.product-item__new-price').textContent));
 
     plusFullPrice(priceNumber);
-    // console.log(price);
     printFullPrice();
 
     cartProductsList.querySelector('.simplebar-content').insertAdjacentHTML('afterbegin', generateCartProduct(img, title, priceString, id));
@@ -94,5 +93,3 @@ cartProductsList.addEventListener('click', (e) => {
     deleteProducts(e.target.closest('.cart-content__item'));
   }
 });
-
-
