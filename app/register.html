@@ -8,14 +8,11 @@
   <title>Store</title>
   <link rel="stylesheet" href="css/style.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-  <script src="js\wow.min.js"></script>
-  <script>
-    new WOW().init();
-  </script>
+  
 </head>
 
 <body>
-  <header class="header">
+  <!-- <header class="header">
     <div class="container">
       <div class="header__inner">
         <a href="#" class="logo">
@@ -58,8 +55,59 @@
         </div>
       </div>
     </div>
-  </header>
+  </header> -->
 
+  <header class="header">
+    <div class="container">
+      <nav class="header__nav nav">
+        <a href="#" class="logo">
+          <img src="images/logo.png" alt="Logo" class="logo-img">
+        </a>
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="index.html" class="nav__link">Главная</a>
+          </li>
+          <li class="nav__item">
+            <a href="shop.html" class="nav__link">Магазин</a>
+          </li>
+          <li class="nav__item">
+            <a href="" class="nav__link">Контакты</a>
+          </li>
+        </ul>
+        <div class="header__cart cart active" tabindex="0">
+          <div class="cart__text">
+            Корзина
+            <span class="cart__quantity">0</span>
+          </div>
+  
+          <div class="cart-content">
+            <ul class="cart-content__list" data-simplebar>
+              <!-- <li class="cart-content__item">
+                  <article class="cart-content__product cart-product">
+                    <img src="images/cart/1.jpg" alt="Clothes" class="cart-product__img">
+                    <div class="cart-product__text">
+                      <h3 class="cart-product__title">Ноутбук Apple MacBook Pro 16 TB i7 2.6/16/512 SSD SG MVVJ2RU/A</h3>
+                      <span class="cart-product__price">
+                        190 789 ₽
+                      </span>
+                    </div>
+                    <button class="cart-product__delete" aria-label="Удалить товар"></button>
+                  </article>
+                </li> -->
+            </ul>
+            <div class="cart-content__bottom">
+              <div class="cart-content__fullprice">
+                <span>Итого:</span>
+                <span class="fullprice">0 ₽</span>
+              </div>
+              <button class="cart-content__btn btn">Перейти в корзину</button>
+            </div>
+          </div>
+  
+        </div>
+      </nav>
+    </div>
+  </header>
   <main class="main">
 
     <section class="top wow animate__animated animate__slideInRight">
@@ -91,14 +139,14 @@
           <a class="modal__link modal__link--active" href="register.html">Регистрация</a>
           <a class="modal__link " href="login.html">Вход</a>
         </div>
-        <form class="modal__form" action="#">
+        <form class="modal__form">
           <label class="modal__label">
-            Имя пользователя или адрес электронной почты*
-            <input class="modal__input" type="text" required>
+            Имя пользователя*
+            <input id="name" class="modal__input" type="text" required>
           </label>
           <label class="modal__label">
             Пароль*
-            <input class="modal__input" type="text" required>
+            <input id="password" class="modal__input" type="password" required>
           </label>
           <p class="modal__text">Пароль будет отправлен на ваш адрес электронной почты.</p>
           <p class="modal__text">Ваши персональные данные будут использоваться для поддержки вашего использования на этом веб-сайте, для управления
@@ -107,15 +155,33 @@
             <input type="checkbox">
             Согласен с правилами и условиями
           </label>
-          <button class="modal__btn" type="submit">Регистрация</button>
+          <button onclick="register(event);" class="modal__btn">Регистрация</button>
         </form>
       </div>
     </section>
 
     
 
-  </main>
 
+  </main>
+    
+
+    <div id="success" class="message message__success">
+      <div class="message__content">
+        <h4 class="message__title">Отлично!</h4>
+        <div class="message__point"></div>
+      </div>
+      <p id="success-text" class="message__text"></p>
+    </div>
+
+    <div id="error" class="message message__error">
+      <div class="message__error-content">
+        <h4 class="message__error-title">Ошибка!</h4>
+        <div class="message__error-point"></div>
+      </div>
+      <p id="error-text" class="message__error-text"></p>
+    </div>
+  
   <footer class="footer">
     <div class="container">
       <div class="footer-top">
@@ -232,8 +298,13 @@
 
 
 
-
-  <script src="js/main.min.js"></script>
+  
+  
 </body>
-
+  <script src="js\wow.min.js"></script>
+  <script>
+  new WOW().init();
+  </script>
+  <script src="js/main.min.js"></script>
+  <script src="js/register_user.js"></script>
 </html>
